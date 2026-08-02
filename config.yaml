@@ -1,0 +1,8 @@
+dataset:
+  root_dir: "/your/path/to/dataset"
+
+paths:
+  result_root: "./Result"
+
+training:
+  batch_size: 48
