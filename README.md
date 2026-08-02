@@ -6,7 +6,7 @@ This repository contains the implementation of our segmentation-guided framework
 
 The code was developed and tested under the following environment:
 
-- Operating system: Linux
+- Operating system: Windows 10
 - Python: 3.11
 - PyTorch: 2.8.0
 - Torchvision: 0.23.0
@@ -50,3 +50,8 @@ Dataset/
 .nrrd files are corresponding liver segmentation masks.
 
 The clinical dataset used in this study is not publicly available due to privacy and ethical restrictions.
+
+## License
+
+This project is currently under review and the source code is not publicly licensed.
+The code will be released under an appropriate open-source license after publication.
