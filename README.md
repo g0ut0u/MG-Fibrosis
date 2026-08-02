@@ -51,6 +51,17 @@ Dataset/
 
 The clinical dataset used in this study is not publicly available due to privacy and ethical restrictions.
 
+## Training
+
+The training scripts are provided for both multitask and single-task learning.
+
+- `fivefold_multitask.py`: used for training multitask models.
+- `fivefold_singletask.py`: used for training single-task models.
+
+Please select the corresponding model configuration inside the script before training.
+```
+
+
 ## License
 
 This project is currently under review and the source code is not publicly licensed.
