@@ -31,8 +31,8 @@ Before running the code, modify the paths and batch size in config.yaml.
 ## Data Organization
 
 The dataset should be organized as follows:
-Dataset/
 ```text
+Dataset/
 │
 ├── 0/
 │   ├── Patient_001/
