@@ -32,6 +32,7 @@ Before running the code, modify the paths and batch size in config.yaml.
 
 The dataset should be organized as follows:
 Dataset/
+```text
 │
 ├── 0/
 │   ├── Patient_001/
@@ -42,6 +43,7 @@ Dataset/
     ├── Patient_002/
     │   ├── image_002.png
     │   └── image_002.nrrd
+```
 
 0 and 1 indicate fibrosis classification labels and 0 is for non-significant fibrosis.
 .png files are ultrasound images.
