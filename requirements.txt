@@ -1,0 +1,12 @@
+# Runtime dependencies (prefer `pip install -e .` to install the package,
+# or install the following manually)
+torch>=1.9
+torchvision
+numpy
+pandas
+scikit-learn
+opencv-python
+pynrrd
+PyYAML
+matplotlib
+tqdm

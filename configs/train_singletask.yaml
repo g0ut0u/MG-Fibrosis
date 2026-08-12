@@ -1,0 +1,19 @@
+# Single-task (classification only) training configuration
+
+model:
+  name: MS_Net            # Options: MS_Net / MS_Net_sh / MS_Net_wo / baseline / baseline_wo
+  bilinear: true
+  dropout: 0.3
+
+train:
+  n_splits: 5
+  random_state: 42
+
+  epochs: 20
+  lr: 2.0e-4
+  weight_decay: 1.0e-4
+  optimizer: AdamW
+
+  # Classification loss: weighted Focal
+  cls_alpha: 0.4375
+  cls_gamma: 1.0

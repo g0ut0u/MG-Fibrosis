@@ -1,0 +1,30 @@
+# Multitask (classification + segmentation) training configuration - two-phase curriculum learning
+
+model:
+  name: MT_MIX            # Options: MT_Net / MT_Net_shcbam / MT_Net_wo / MT_MP / MT_MP_shcbam /
+                          #          MT_MP_wo / MT_MIX / MT_MIX_shcbam / MT_MIX_wo
+  bilinear: true
+  dropout: 0.3
+
+train:
+  n_splits: 5
+  random_state: 42
+
+  # --- Phase 1: segmentation-only pretraining ---
+  phase1_epochs: 45
+  phase1_lr: 8.0e-4
+  phase1_lambda_seg: 1.0
+  phase1_lambda_cls: 0.0
+
+  # --- Phase 2: joint training (lambda linear transition) ---
+  phase2_epochs: 15
+  phase2_lr: 2.0e-4
+  phase2_lambda_seg: 0.8
+  phase2_lambda_cls: 0.2
+
+  weight_decay: 1.0e-4
+  optimizer: AdamW
+
+  # Classification Focal loss: positive-class ratio alpha (mitigates class imbalance)
+  cls_alpha: 0.4375         # 273/624
+  cls_gamma: 0.5            

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ultrasound-mt"
+version = "0.1.0"
+description = "Multi-task learning for benign vs. malignant lesion classification and segmentation in ultrasound images"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "torch>=1.9",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "opencv-python",
+    "pynrrd",
+    "PyYAML",
+    "matplotlib",
+    "tqdm",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"

@@ -1,0 +1,27 @@
+# Data configuration
+# Paths are absolute or relative to the project root (${PROJECT_ROOT} placeholder is supported; absolute paths are used here)
+
+paths:
+  dataset_dir: /data/Li/dataset        # Ultrasound images (0/1 class) + NRRD masks
+  result_dir: /data/Li/Result           # Trained weights and historical results (keep, do not modify)
+  output_dir: /data/Li/results          # New experiment outputs (models/CSV/figures)
+
+data:
+  image_size: [768, 1024]              # (H, W)
+  require_mask: true
+  in_channels: 1
+
+  # Data augmentation
+  use_translation_aug: true
+  use_rotation_aug: true
+  max_shift_x: 20
+  max_shift_y: 20
+  max_rotate_angle: 10
+  translation_p: 1.0
+  rotation_p: 1.0
+  aug_repeat_count: 2                   # Number of augmentations per image (online augmentation)
+
+  # DataLoader
+  batch_size: 48
+  num_workers: 0
+  pin_memory: true
