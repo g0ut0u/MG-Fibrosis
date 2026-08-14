@@ -2,9 +2,9 @@
 # Paths are absolute or relative to the project root (${PROJECT_ROOT} placeholder is supported; absolute paths are used here)
 
 paths:
-  dataset_dir: /data/Li/dataset        # Ultrasound images (0/1 class) + NRRD masks
-  result_dir: /data/Li/Result           # Trained weights and historical results (keep, do not modify)
-  output_dir: /data/Li/results          # New experiment outputs (models/CSV/figures)
+  dataset_dir:         # Ultrasound images (0/1 class) + NRRD masks
+  result_dir:           # Trained weights and historical results (keep, do not modify)
+  output_dir:          # New experiment outputs (models/CSV/figures)
 
 data:
   image_size: [768, 1024]              # (H, W)
